@@ -7,6 +7,7 @@ class EmailsToInviteRepository:
 
         self.__conn = conn
 
+
     def registry_email(self, email_infos: Dict) -> None:
 
         cursor = self.__conn.cursor()
@@ -27,6 +28,7 @@ class EmailsToInviteRepository:
         )
 
         self.__conn.commit()
+
 
     def find_emails_from_trip(self, trip_id: str) -> List[Tuple]:
 

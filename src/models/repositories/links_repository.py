@@ -2,9 +2,11 @@ from typing import Dict, Tuple, List
 from sqlite3 import Connection
 
 class LinksRepository:
+
     def __init__(self, conn: Connection) -> None:
 
         self.__conn = conn
+
 
     def registry_link(self, link_infos: Dict) -> None:
 
@@ -27,6 +29,7 @@ class LinksRepository:
         )
 
         self.__conn.commit()
+
 
     def find_links_from_trip(self, trip_id: str) -> List[Tuple]:
 

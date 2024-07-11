@@ -7,6 +7,7 @@ db_connection_handler.connect()
 
 trip_id = str(uuid.uuid4())
 
+
 @pytest.mark.skip(reason="interaction with the database")
 def test_registry_email():
 
@@ -22,6 +23,7 @@ def test_registry_email():
     }
 
     emails_to_invite_repository.registry_email(email_trips_infos)
+
 
 @pytest.mark.skip(reason="interaction with the database")
 def test_find_emails_from_trip():

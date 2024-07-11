@@ -8,6 +8,7 @@ db_connection_handler.connect()
 link_id = str(uuid.uuid4())
 trip_id = str(uuid.uuid4())
 
+
 @pytest.mark.skip(reason="interaction with the database")
 def test_registry_link():
 
@@ -24,6 +25,7 @@ def test_registry_link():
     }
 
     link_repository.registry_link(link_infos)
+
 
 @pytest.mark.skip(reason="interaction with the database")
 def test_find_links_from_trip():

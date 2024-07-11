@@ -8,6 +8,7 @@ db_connection_handler.connect()
 
 trip_id = str(uuid.uuid4())
 
+
 @pytest.mark.skip(reason="interaction with the database")
 def test_create_trip():
 
@@ -27,6 +28,7 @@ def test_create_trip():
 
     trips_repository.create_trip(trips_infos)
 
+
 @pytest.mark.skip(reason="interaction with the database")
 def test_find_trip_by_id():
 
@@ -35,6 +37,7 @@ def test_find_trip_by_id():
 
     trip = trips_repository.find_trip_by_id(trip_id)
     print(trip)
+
 
 @pytest.mark.skip(reason="interaction with the database")
 def test_update_trip_status():
